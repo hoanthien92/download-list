@@ -32,6 +32,15 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
+    browsers: [
+      'ChromeDebugging'
+    ],  
+    customLaunchers: {
+      ChromeDebugging: {
+        base: 'Chrome',
+        flags: [ '--remote-debugging-port=9333' ]
+      }
+    },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
